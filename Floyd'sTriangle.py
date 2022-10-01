@@ -14,8 +14,9 @@ print(r"""          $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 print("Enter the number of Rows: \n", end="")
 row = int(input())
 num = 1
+max_digits = len(str(row * (row+1)//2))
 for i in range(row):
     for j in range(i+1):
-        print(num, end="")
+        print(str(num).ljust(max_digits), end=" ")
         num = num+1
-    print()    
+    print()
