@@ -13,9 +13,9 @@ print(r"""          $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 def print_factors(x):
     print("The Factors Of",x,"are:")
-    for i in range (1, x + 1):
-        if x % i ==0:
-            print(i)
+    for i in range (1, int(x**(1/2)) + 1):
+        if x % i == 0:
+            print(i, x//i if i*i != x else "")
 
 num=int(input("Enter a Number to Find The Factors: \n"))
 print_factors(num)                
